@@ -1,0 +1,44 @@
+<script type = "text/javascript">
+window.onload = function() {
+    document.getElementById("sample").innerHTML = funcList();
+}
+
+function funcList() {
+    var $arr = new Array(
+        ["1-1", "1-2", "1-3"],
+        ["2-1", "2-2", "2-3"],
+        ["3-1", "3-2", "3-3"]
+    )
+    var $list = '<ol>\n';
+    for(var $counterVarA = 0; $counterVarA <
+    $arr.length; $counterVarA++) {
+        $list += '<li>';
+        $list += '<ol>';
+        for(var $counterVarB=0;$counterVarB<
+        $arr[$counterVarA].length;$counterVarB++) {
+            $list += '<li>';
+            $list += $arr[$counterVarA][$counterVarB];
+            $list += '</li>';
+        }
+        $list += '</ol>';
+        $list += '</li>\n';
+    }
+    $list += '</ol>';
+    return $list;
+}
+</script>
+
+<!DOCTYPE = <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="sample">aaa</div>
+</body>
+</html>
